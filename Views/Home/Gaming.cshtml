@@ -1,0 +1,55 @@
+﻿<!--So this page under Gaming View should always be named by Index, so that the controller can redirect return the right default page -->
+<!--Render path is from the virtual path that created in budleconfig.cs-->
+@{
+    Layout = "BlankLayerOut";
+}
+
+<title>@ViewData["Shopmaster"]</title>
+<div class="Chat_banner"><img src="~/css/horn.png" class="chat_banner_img" />聊天室</div>
+<div id="chatbox" name="chatbox" class="chatbox"></div>
+<div class="Typing_line">
+    <img id="icon_view" src="~/images/Defalut_Personal_Icon.jpg" class="personal_icon" />
+    <textarea id="chatinput" name="chatinput" class="chatinput"></textarea>
+    <button id="send_button" class="enter_button" >发送</button>
+</div>
+
+<div class="table_selection">
+    <div id="gaming_banner" class="gaming_banner">
+        <img src="~/css/customer.png" class="gaming_option" style="position:relative;left:17%" onclick="show_table('customer')" />
+        <img src="~/css/shelf.png" class="gaming_option" style="position:absolute;left:37%;background-color:burlywood" onclick="show_table('shelf_1')" />
+        <img src="~/css/price.png" class="gaming_option" style="position:absolute;background-color:gold;left:57%;" onclick="show_table('instock')" />
+        <img src="~/css/supply.png" class="gaming_option" style="position:absolute;background-color:skyblue;left:77%;" onclick="show_table('Supply_market');" />
+    </div>
+    <div class="gaming_sub_banner">
+        <text style="position:relative;left:18.6%;font-weight:bold">顾客</text>
+        <text style="position:absolute;left:38.6%;font-weight:bold">存货</text>
+        <text style="position:absolute;left:58.65%;font-weight:bold">定价</text>
+        <text style="position: absolute;left:78.5%;font-weight:bold">供应</text>
+    </div>
+    <div class="banner_space_gaming_1"></div>
+    <div id="inshelf" class="shelf_list">
+        <table id="Supply_market" style="position:absolute; left:8%;width:auto; border-collapse:collapse;display:none;"></table>
+        <table class="customer" id="customer" style="display:none"></table>
+        <table id="instock" class="instocktable" style="display:none"></table>
+    </div>
+    <div class="banner_space_gaming_2"></div>
+    <div class="submission_line">
+        <button id="openstore" class="sold" onclick="go_to_nextday()"
+                onmousedown="pressbutton(this.id)"
+                onmouseup="backtodefaultstyle(this.id)"
+                onmouseover="bluegrowingtext('soldinstruction')"
+                onmouseleave="bluetext('soldinstruction')" style="cursor: pointer"></button>
+        <text id="soldinstruction" class="soldtext">进入下一天</text>
+        <text id="round_number" class="round_number"></text>
+        <input id="days_count" value="1" style="display:none" />
+    </div>
+
+</div>
+
+<div id="bottom_banner" class="bottom_banner">
+    <text id="user_name" style="position:absolute;right:7%;bottom:30%">@ViewData["Master"]</text>
+    <table id="Capital_table" style="position:relative;display:inline-block"></table>
+</div>
+
+
+

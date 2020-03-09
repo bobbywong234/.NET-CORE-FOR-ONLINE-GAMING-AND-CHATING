@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "用户注册";
+}
+
+<script language="javascript" type="text/javascript">
+        function personal_icon_upload_preview(input) {
+            var file_reader = new FileReader();
+            file_reader.onload = function (e) {
+                $('#icon_view').attr('src', e.target.result).width(50).height(50);
+            };
+
+            file_reader.readAsDataURL(input.files[0]);
+            
+        }
+
+        function passwordchecking(passwordinput) {
+            if (passwordinput.value != document.getElementById('password').value) {
+                passwordinput.setCustomValidity('密码输入不匹配，请再次输入。');
+            }
+            else {
+                passwordinput.setCustomValidity('');
+            }
+
+        }
+
+</script>
+
+
+<form method="post" action="@Url.Action("Registration_submission", "home")" enctype="multipart/form-data">
+    <h2>成为店长</h2>
+    <p></p>
+    <label for="LOGIN">注册名称</label>
+    <a style="padding-left:2em"></a>
+    <input type="text" name="LOGIN" value="" required oninvalid="this.setCustomValidity('用户名不能为空')"
+           oninput="this.setCustomValidity('')" />
+    <p style="line-height:30px"></p>
+    <label for="PASS">密码</label>
+    <a style="padding-left:4em"></a>
+    <input type="password" id="password" name="PASS" value=""
+           required oninvalid="this.setCustomValidity('用户注册密码不能为空')"
+           oninput="this.setCustomValidity('')" lang="en" />
+    <p style="line-height:30px"></p>
+    <label for="REPASS">确认密码</label>
+    <a style="padding-left:2em"></a>
+    <input type="password" name="REPASS" value=""
+           required oninvalid="this.setCustomValidity('请输入确认密码,并与注册密码一致')"
+           oninput="passwordchecking(this)" lang="en" />
+    <p style="line-height:50px"></p>
+    <label for="personal_icon" style="position:relative">
+        <text>个人头像</text>
+        <a style="padding-left:2em"></a>
+        <img id="Add_icon" src="~/images/blue_plus.png" style="height:15px;width:15px;position:absolute;top:-50%;left:105%;cursor:pointer" />
+    </label>
+    <img id="icon_view" src="~/images/Defalut_Personal_Icon.jpg" style="height:50px;width:50px;display:inline-block;border-radius:50%;" />
+    <input type="file" name="personal_icon" id="personal_icon"
+           onchange="personal_icon_upload_preview(this);" accept="image/bmp, image/jpeg, image/png" style="display:none;">
+    <p style="line-height:50px"></p>
+    <input type="submit" class="btn btn-primary btn-lg" value="确认" />
+</form>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/Gaming.css" />
+    
+</head>
+<body onload="onloadpagedata()">
+        @RenderBody()
+    <partial name="_CookieConsentPartial" />
+    <script src="~/js/Constore.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
