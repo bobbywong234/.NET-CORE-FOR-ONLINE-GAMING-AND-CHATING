@@ -1,0 +1,566 @@
+﻿
+body {
+    /*
+        the url path in background-image startwith the document's current path
+        and the image file could be under this path
+        or in the subdirectory of this document path
+    */
+    background-image: url('background.jpg');
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+
+/*foundation css design for gaming*/
+.table_selection {
+    background-color: white;
+    width: 600px;
+    height: 540px;
+    position: relative;
+    margin-left: 30%;
+}
+@media screen and (max-width:750px) {
+    .table_selection {
+        width: 400px;
+    }
+}
+@media screen and (max-width:650px) {
+    .table_selection {
+        width: 300px;
+    }
+}
+@media screen and (max-height:620px) {
+    .table_selection {
+        height: 360px;
+    }
+}
+@media screen and (max-height:572px) {
+    .table_selection {
+        height: 284px;
+    }
+}
+
+.submission_line {
+    width: 100%;
+    height: 30px;
+    position: relative
+}
+@media screen and (max-height:50px) {
+    .table_selection {
+        width: 15px;
+    }
+}
+
+.shelf_list {
+    position: relative;
+    left: 16.5%;
+    width: 400px;
+    height: 320px;
+}
+@media screen and (max-width:750px) {
+    .shelf_list {
+        width: 250px;
+    }
+}
+@media screen and (max-width:650px) {
+    .shelf_list {
+        width: 150px;
+    }
+}
+
+@media screen and (max-height:400px) {
+    .shelf_list {
+        height: 125px;
+    }
+}
+
+@media screen and (max-height:370px) {
+    .shelf_list {
+        height: 100px;
+    }
+}
+
+.sold {
+    position: relative;
+    background-image: url('next_round_of_customer.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 100%;
+    left: 3%;
+    border-color: black;
+    border-width: thin;
+}
+
+
+.soldtext {
+    position: absolute;
+    left: 10%;
+    bottom:0%;
+    font-size: large;
+    text-shadow: 1px 1px 2px blue;
+    color: white;
+    font-weight: 700;
+    display:inline-block;
+}
+@media screen and (max-font-size:large) {
+    .soldtext {
+        font-size: small;
+    }
+}
+
+.round_number {
+    position: absolute;
+    right:2%;
+    bottom:0%;
+    font-size: large;
+    text-shadow: 1px 1px 2px #ff0000;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.shelfCat {
+    background-color: aqua;
+    border: 2px solid black;
+    height: 24px;
+    font-size: 10px;
+}
+@media screen and (max-height:48) {
+    .shelfCat {
+        height:12px
+    }
+}
+
+.shelftitle {
+    background-color: gray;
+    color: white;
+    border: 2px solid black;
+    width:80px
+}
+@media screen and (max-width:160px) {
+    .shelftitle {
+        width:40px;
+    }
+}
+
+.instocktable {
+    position: absolute;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 0%;
+    width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.instockinput {
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:140px) {
+    .instockinput {
+        width: 35px;
+    }
+}
+
+@media screen and (max-height:40px) {
+    .instockinput {
+        height: 10px;
+    }
+}
+
+.instocktitle {
+    border: 1px solid black;
+    background-color: gray;
+    font-size: 15px;
+    width:140px;
+    height:40px;
+}
+@media screen and (max-width:200px) {
+    .instocktitle {
+        width: 50px;
+    }
+}
+@media screen and (max-height:70px) {
+    .instocktitle {
+        height: 20px;
+    }
+}
+
+.instockcells {
+    border: 1px solid black;
+    background-color: yellow;
+    font-size: 13px;
+    height:40px;
+}
+@media screen and (max-height:70px) {
+    .instockcells {
+        height: 20px;
+    }
+}
+
+.Shelf1 {
+    position: absolute;
+    left:0%;
+    top:0%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:auto;
+    height:auto;
+}
+
+.Shelf2 {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+}
+
+.Shelf3 {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+}
+
+.Shelf4 {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+}
+
+.pricinginput {
+    width: 35px;
+    height: 10px;
+    text-align: center;
+}
+@media screen and (max-height:20px) {
+    .pricinginput {
+        height: 5px;
+    }
+}
+@media screen and (max-width:20px) {
+    .pricinginput {
+        width: 17.5px;
+    }
+}
+
+.customer {
+    position: absolute;
+    left: 0.5%;
+    top: 0%;
+    vertical-align: bottom;
+    width: auto;
+    height: auto;
+    border: 2px solid black;     
+}
+
+.customercell {
+    font-size: 12px;
+    font-style: normal;
+    background-color: cadetblue;
+    width:100px;
+    height:55px;
+    border:2px solid black;
+}
+@media screen and (max-width:140px) {
+    .customercell {
+        width: 50px;
+    }
+}
+
+.customerinput {
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    font-size: 11px;
+}
+@media screen and (max-width:100px) {
+    .customerinput {
+        width: 35px;
+    }
+}
+@media screen and (max-height:60px) {
+    .customerinput {
+        height: 14px;
+    }
+}
+
+.supplycellformate {
+    font-size: 11px;
+    font-style: normal;
+    height: 26px;
+    width: 80px;
+    border: 1px solid black;
+    background-color: greenyellow
+}
+@media screen and (max-height:60px) {
+    .supplycellformate {
+        height: 15px;
+    }
+}
+@media screen and (max-width:160px) {
+    .supplycellformate {
+        height: 40px;
+    }
+}
+@media screen and (max-font-size:22px) {
+    .supplycellformate {
+        font-size:7px;
+    }
+}
+
+.supply_button_plus{
+    width:25px;
+    height:25px;
+    background-image:url('plus.png');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-color:transparent;
+}
+.supply_button_minus {
+    width: 25px;
+    height: 25px;
+    background-image: url('minus.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.capitalinfo {
+    font-size: 16px;
+    font-style: italic;
+    color: forestgreen;
+    background-color: gold;
+}
+@media screen and (max-font-size:32px) {
+    .capitalinfo {
+        font-size:8px;
+    }
+}
+
+.option_tab {
+    resize: none;
+    width:auto;
+    height:auto;
+    background-color:white;
+}
+/*break*/
+
+
+
+
+
+/*chat room background design, foundation design for chat room build-up*/
+.personal_icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 0%;
+}
+@media screen and (max-width:60px) {
+    .personal_icon {
+        width: 15px;
+    }
+}
+@media screen and (max-height:60px) {
+    .personal_icon {
+        height: 15px;
+    }
+}
+
+.chatbox{
+    position:relative;
+    background-color:white;
+    width:100%;
+    height:150px;
+    overflow:auto;
+    resize:none;
+    vertical-align:top
+}
+@media screen and (max-height:300px) {
+    .chatbox {
+        height: 75px;
+    }
+}
+
+.chatinput {
+    position: absolute;
+    width: 1370px;
+    top:6.9%;
+    margin-left:0.2%;
+    height: 30px;
+    resize: none;
+    overflow:auto;
+    border-radius:7px;
+    display:inline-block;
+    vertical-align:central
+}
+@media screen and (max-width:1500px) {
+    .chatinput {
+        width: 900px;
+    }
+}
+@media screen and (max-height:40px) {
+    .chatinput {
+        height: 10px;
+    }
+}
+
+.enter_button {
+    height: 25px;
+    width: 5%;
+    position: absolute;
+    top: 20%;
+    right: 1%;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Global User Interface';
+    font-weight: bold;
+    background-color: turquoise;
+    border-radius: 30%;
+    border-color: turquoise
+}
+@media screen and (max-height:60px) {
+    .enter_button {
+        height: 15px;
+    }
+}
+
+.bottom_banner {
+    position: relative;
+    background-color: lightskyblue;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35px;
+}
+@media screen and (max-height:60px) {
+    .bottom_banner {
+        height: 15px;
+    }
+}
+
+.Typing_line {
+    height: auto;
+    width: 100%;
+    background-color: darkgray;
+    position:relative;
+    border-radius:7px;
+    display:block;
+}
+/*break*/
+
+
+/*banner design*/
+.Chat_banner{
+ width:100%;
+ height:auto;
+ background-color:turquoise;
+ font-size:14px;
+ font-family:'Segoe UI Symbol';
+ font-weight:bold;
+}
+.chat_banner_img{
+    width:25px;
+    height:25px;
+}
+.gaming_banner {
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+    position:relative;
+}
+.gaming_sub_banner {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    position:relative;
+}
+.banner_space_gaming_1 {
+    height: 20px;
+}
+.banner_space_gaming_2 {
+    height: 95px;
+}
+.gaming_option {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+/*break*/
+/*online-chat box-design, this design is for the content of people's ted talk*/
+.chat {
+    border-radius: 6px;
+    width: 120px;
+    height: auto;
+    resize: none;
+    background-color: lawngreen;
+    border-color: lawngreen;
+}
+@media screen and (max-width:240px) {
+    .chat {
+        width: 60px;
+    }
+}
+
+.chatpara {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.Received_msg {
+    border-radius: 6px;
+    width: 120px;
+    height: auto;
+    resize: none;
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}
+@media screen and (max-width:240px) {
+    .Received_msg {
+        width: 60px;
+    }
+}
+
+.Received_para {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.personal_icon_chat {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+@media screen and (max-height:60px) {
+    .personal_icon_chat {
+        height: 15px;
+    }
+}
+@media screen and (max-width:60px) {
+    .personal_icon_chat {
+        width: 15px;
+    }
+}
+/*break*/
