@@ -7,4 +7,5 @@ Version 2.01.0:<br />
 2.Online Gaming as a simulated Convenient Store Master<br />
 3.Resolution adjusted for cross-platform, included PC and Mobile devices<br /><br />
 Version 2.01.1:<br />
-1.Have added real-time gaming scores ranking after the submission of final scores
+1.Have added real-time gaming scores ranking after the submission of final scores<br />
+2.Bug Fix for Mobile Devices' resolution
